@@ -7,16 +7,12 @@ $(document).ready(function() {
   const answer4 = $("input:radio[name=q4]:checked").val();
   const answer5 = $("input:radio[name=q5]:checked").val();
 
-  
-
-
   const name = $("#name").val();
   const upper = name.split(" ");
   for (let i = 0; i < upper.length; i++) {
     upper[i] = upper[i][0].toUpperCase() + upper[i].substr(1);
   }
   let final = upper.join(" ");
-
 
   if (answer1 === '1' && answer2 === '4' && answer3 === '7' && answer4 === '10' && answer5 === '13') {
     $("#ruby").fadeOut();
