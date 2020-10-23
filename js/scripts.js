@@ -8,9 +8,20 @@ $(document).ready(function() {
   const answer5 = $("input:radio[name=q5]:checked").val();
   const name = $("#name").val();
 
+/* tried to upper case first letters of two names. Only first works"*/
+  const upper = name.split();
+  for (let i = 0; i < upper.length; i++) {
+    upper[i] = upper[i][0].toUpperCase() + upper[i].substr(1);
+  }
+  let final = upper.join();
+
+
+/*
   const upper = name.slice(0,1).toUpperCase();
   const lower = name.slice(1,name.length).toLowerCase();
   const finalName = upper + lower;
+*/
+
 
 
   if (answer1 === '1' && answer2 === '4' && answer3 === '7' && answer4 === '10' && answer5 === '13') {
@@ -45,13 +56,14 @@ $(document).ready(function() {
     $("#trythis").show();
   }
   
-  if (name !== undefined && answer1 !== undefined && answer2 !== undefined && answer3 !== undefined && answer4 !== undefined && answer5 !== undefined) {
+  /*if (name !== undefined && answer1 !== undefined && answer2 !== undefined && answer3 !== undefined && answer4 !== undefined && answer5 !== undefined) {
     $(".form-control").addClass("red");
   } else {
     $(".form-control").removeClass("red");
   }
+  */
 
-  $(".firstName").text(finalName);
+  $(".firstName").text(final);
   $("#result").show();
   
   event.preventDefault();
