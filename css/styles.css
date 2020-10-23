@@ -1,3 +1,7 @@
+#result {
+  display: none;
+}
+
 header {
   height: 25px;
   width: 100%;
@@ -32,4 +36,9 @@ textarea {
 
 .form-control {
   width: 2in;
+  margin-left: 3.1in;
+}
+
+.btn {
+  border: 1px solid black;
 }
