@@ -1,11 +1,13 @@
 $(document).ready(function() {
   $("#form").submit(function(event){
-    
+
   const answer1 = $("input:radio[name=q1]:checked").val();
   const answer2 = $("input:radio[name=q2]:checked").val();
   const answer3 = $("input:radio[name=q3]:checked").val();
   const answer4 = $("input:radio[name=q4]:checked").val();
   const answer5 = $("input:radio[name=q5]:checked").val();
+
+  
 
 
   const name = $("#name").val();
@@ -14,6 +16,7 @@ $(document).ready(function() {
     upper[i] = upper[i][0].toUpperCase() + upper[i].substr(1);
   }
   let final = upper.join(" ");
+
 
   if (answer1 === '1' && answer2 === '4' && answer3 === '7' && answer4 === '10' && answer5 === '13') {
     $("#ruby").fadeOut();
@@ -62,7 +65,19 @@ $(document).ready(function() {
 
 
 
-/*  tried to add numeric value
+
+
+
+
+
+
+
+
+
+
+
+
+/* tried to add numeric value
 let results = $("#results");
   let score = 0;
   if (answer1 == "dd") {
@@ -78,6 +93,24 @@ let results = $("#results");
   }
   
 
+/* tried another numeric value no luck
+  function add(answer1, answer2, answer3, answer4, answer5) {
+    return answer1 + answer2 + answer3 + answer4 + answer4;
+  }
+  let answers = add(answer1, answer2, answer3, answer4, answer5)
+
+  if ( answers <=8 ) {
+  $("#result").text("vanilla");
+  } else if ( answers <=29) {
+    $("#result").text("chocolate");
+  } else if ( answers <=33) {
+    $("#result").text("strawberry");
+  } else if ( answers <=43) {
+    $("#result").text("peach");
+  } else if ( answers <=55) {
+    $("#result").text("melon");
+  }
+
 
 /* tried to have image appear if no value entered
   if (name !== undefined) {
@@ -85,4 +118,25 @@ let results = $("#results");
   } else {
     $("#image").fadeOut();
   }
+
+
+/* should highlight name input form with red if name isnt enetered
+if ( name !== undefined && answer1 !== undefined && answer2 !== undefined && answer3 !== undefined && answer4 !== undefined && answer5 !== undefined) {
+  $(".form-control").addClass("red") 
+  $("#image").show();
+} else {
+  $(".form-control").removeClass("red");
+  $("#image").hide();
+}
+
+
+/* should alert if name isnt entered
+$("#name").keyup(function(event) {
+    if (event.keyCode === 13) {
+      $("#btn").click();
+    }
+  });
+    $("#btn").click(function() {
+      alert("Enter your name");
+    });
 */
