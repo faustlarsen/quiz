@@ -42,3 +42,7 @@ textarea {
 .btn {
   border: 1px solid black;
 }
+
+.red {
+  border: 1px solid red;
+}
