@@ -7,12 +7,13 @@ header {
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: #69d2f5;
+  background-color: #c0e6f2;
 }
 h2 {
   text-align: center;
   font-size: 20px;
   line-height: 0.1cm;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 #fl img {
@@ -26,8 +27,8 @@ textarea {
 }
 
 .container {
-  border: 2px solid black;
-  height: 800px;
+  border: 1px solid black;
+  height: 771px;
   width: 800px;
   padding: 5px;
   text-align: center;
@@ -46,3 +47,4 @@ textarea {
 .red {
   border: 1px solid red;
 }
+

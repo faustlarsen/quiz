@@ -8,6 +8,11 @@ $(document).ready(function() {
   const answer5 = $("input:radio[name=q5]:checked").val();
   const name = $("#name").val();
 
+  const upper = name.slice(0,1).toUpperCase();
+  const lower = name.slice(1,name.length).toLowerCase();
+  const finalName = upper + lower;
+
+
   if (answer1 === '1' && answer2 === '4' && answer3 === '7' && answer4 === '10' && answer5 === '13') {
     $("#ruby").hide();
     $("#french").hide();
@@ -26,20 +31,27 @@ $(document).ready(function() {
     $("#java").hide();
     $("#swift").show();
 
+  } else if (answer1 === '2' && answer2 === '4' && answer3 === '9' && answer4 === '10' && answer5 === '13') {
+    $("#ruby").hide();
+    $("#swift").hide();
+    $("#java").hide();
+    $("#french").show();
+
   } else {
     $("#ruby").hide();
     $("#java").hide();
     $("#swift").hide();
-    $("#french").show();
+    $("#french").hide();
+    $("#trythis").show();
   }
   
-  if (name !== undefined) {
+  if (name !== undefined && answer1 !== undefined && answer2 !== undefined && answer3 !== undefined && answer4 !== undefined && answer5 !== undefined) {
     $(".form-control").addClass("red");
   } else {
     $(".form-control").removeClass("red");
   }
 
-  $(".firstName").text(name);
+  $(".firstName").text(finalName);
   $("#result").show();
   
   event.preventDefault();
