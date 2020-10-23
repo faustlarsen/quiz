@@ -24,25 +24,30 @@ $(document).ready(function() {
   if (answer1 === '1' && answer2 === '4' && answer3 === '7' && answer4 === '10' && answer5 === '13') {
     $("#ruby").hide();
     $("#french").hide();
-    $("#swift").hide();$
-    ("#java").show();
+    $("#swift").hide();
+    $("#trythis").hide();
+    $("#image").hide();
+    $("#java").show();
 
   } else if (answer1 === '2' && answer2 === '5' && answer3 === '8' && answer4 === '11' && answer5 === '14') {
     $("#java").hide();
     $("#french").hide();
     $("#swift").hide();
+    $("#trythis").hide();
     $("#ruby").show();
 
   } else if (answer1 === '3' && answer2 === '6' && answer3 === '9' && answer4 === '12' && answer5 === '15') {
     $("#ruby").hide();
     $("#french").hide();
     $("#java").hide();
+    $("#trythis").hide();
     $("#swift").show();
 
   } else if (answer1 === '2' && answer2 === '4' && answer3 === '9' && answer4 === '10' && answer5 === '13') {
     $("#ruby").hide();
     $("#swift").hide();
     $("#java").hide();
+    $("#trythis").hide();
     $("#french").show();
 
   } else {
@@ -53,13 +58,16 @@ $(document).ready(function() {
     $("#trythis").show();
   }
   
-  /* red doesnt dispappear */
-  if (name !== undefined && answer1 !== undefined && answer2 !== undefined && answer3 !== undefined && answer4 !== undefined && answer5 !== undefined) {
-    $(".form-control").addClass("red");
+
+  /* red doesnt disappear
+  if ( name !== undefined && answer1 !== undefined && answer2 !== undefined && answer3 !== undefined && answer4 !== undefined && answer5 !== undefined) {
+    $(".form-control").addClass("red") 
+    $("#image").show();
   } else {
     $(".form-control").removeClass("red");
+    $("#image").hide();
   }
-  
+  */
 
   $(".firstName").text(final);
   $("#result").show();
