@@ -15,3 +15,21 @@ h2 {
   margin-left: 14in;
   width: 0.5in;
 }
+
+textarea {
+  width: 300px;
+  height: 150px;
+}
+
+.container {
+  border: 2px solid black;
+  height: 800px;
+  width: 800px;
+  padding: 5px;
+  text-align: center;
+  background-color: white;
+}
+
+.form-control {
+  width: 2in;
+}
